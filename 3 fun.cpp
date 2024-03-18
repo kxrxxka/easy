@@ -41,7 +41,7 @@ int itc_spr(int a, int b) {
 }
 
 int itc_str(int a, int b, int c) {
-    if ((a <= 0 || b <= 0 || c <= 0 ) || (c > b) && (c > a) && (a + b <= c) || (b > c) && (b > a) && (a + c <= b) || (a > b) && (a > c) && (c + b <= a)) {
+    if ((a <= 0 || b <= 0 || c <= 0 ) || (c < b) && (c < a) && (a + b <= c) || (b < c) && (b < a) && (a + c <= b) || (a < b) && (a < c) && (c + b <= a)) {
         return -1;
         }
         int per, s;
@@ -61,7 +61,7 @@ double itc_scir(int radius) {
         return -1;
     }
     double s;
-    s = radius * radius * pi;
+    s = pi * (radius * radius);
 
     return s;
 
