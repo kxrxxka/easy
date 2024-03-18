@@ -44,18 +44,16 @@ int itc_str(int a, int b, int c) {
     if ((a <= 0 || b <= 0 || c <= 0 ) || a >= (b + c) || b >= (a + c) || c >= (a + b)) {
         return -1;
         }
+        if ((a + b + c) % 2 != 0) {
+            return -1;
+        }
         double per;
         double s;
         per = (a + b + c) / 2;
-
-        if (per == 0) {
         s = itc_sqrt(per * (per - a) * (per - b) * (per - c));
         return s;
-        }
 
-        else {
-            return -1;
-        }
+}
 
 }
 
