@@ -7,7 +7,7 @@ double itc_pow(int num, int step) {
         for (int i = 0; i < -step - 1; i++) {
             annum = annum * num;
         }
-        return 1/annum;
+        return 1.0/annum;
     }
 
     for (int i = 0; i < step - 1; i++) {
