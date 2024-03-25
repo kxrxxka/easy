@@ -3,6 +3,11 @@ using namespace std;
 
 double itc_pow(int num, int step) {
     int allnum = num;
+
+    if (step == 0){
+    return 1; 
+    }
+    
     if (step < 0){
         for (int i = 0; i < -step - 1; i++){
             allnum = allnum * num;
@@ -14,8 +19,7 @@ double itc_pow(int num, int step) {
     }
     return allnum;
     
-    if (step == 0){
-        return 1; }
+
 
 }
 
