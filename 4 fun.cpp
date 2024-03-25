@@ -2,20 +2,21 @@
 using namespace std;
 
 double itc_pow(int num, int step) {
-    int annum = num;
-    if (step < 0) {
-        for (int i = 0; i < -step - 1; i++) {
-            annum = annum * num;
+    int allnum = num;
+    if (step < 0){
+        for (int i = 0; i < -step - 1; i++){
+            allnum = allnum * num;
+
         }
-        return 1.0/annum;
+        return 1.0 / allnum;
     }
-
-    for (int i = 0; i < step - 1; i++) {
-        annum = annum * num;
+    for (int i = 0; i < step - 1; i++){
+        allnum = allnum * num;
     }
-
-    return num;
-
+    return allnum;
+    
+    if (step == 0){
+        return 1;
 
 }
 
