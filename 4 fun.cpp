@@ -6,7 +6,6 @@ double itc_pow(int num, int step) {
     if (step < 0){
         for (int i = 0; i < -step - 1; i++){
             allnum = allnum * num;
-
         }
         return 1.0 / allnum;
     }
@@ -16,7 +15,7 @@ double itc_pow(int num, int step) {
     return allnum;
     
     if (step == 0){
-        return 1;
+        return 1; }
 
 }
 
